@@ -61,15 +61,45 @@ Preset Constants
 * `PHP_OS` Grabs OS
 * `DEFAULT_INCLUDE_PATH` Path for Including
 
-XOR
+XOR  
 `^`
 
-Not Equal
+Not Equal  
 `<>`
 
-Scope Resolution
-`Person::sayhello();`
+Scope Resolution  
+`Person::sayhello();`  
 Method of `Person`
+
+Execution Operator  
+' (Backtick)  
+It's eval
+
+Passing by Value and Reference  
+`somefunc($foo, &$bar);`  
+Passing with the `&` passes the value by reference. Useful. 
+
+## Functions and Prototypes
+Prototypes  
+`number pow ( number base, number exp)`  
+Type Name (Type Name, Type Name [, Type Name [, Type Name]])
+
+Check if Undefined
+`!isset($foo)`  
+Rather than `empty($foo)`, which only checks if the value is falsy. `unset($foo)` deallocates. 
+
+Eval and Exit
+`eval()`  
+Just like Javascript!  
+`exit()`  
+The `exit` construct terminates the script immediately  
+
+Short-Circuit Operations
+`$someVar = do_some_func() OR die("do_some_func() returned false!");`
+Cannot use `||` instead of `OR` because `||` takes a higher precedence than `=`, because of that, it won't short-circuit correctly. `$someVar` will be set to `1`. This is different from JavaScript.
+
+
+
 
 
 
