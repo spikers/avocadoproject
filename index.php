@@ -7,13 +7,12 @@
 <body>
   <div id="container">
     <?php
-        if (isset($_SERVER['HTTP_REFERER'])) {
-            print "The page you were on previously was {$_SERVER['HTTP_REFERER']}<br />";
-        } else {
-            print "You didn't click any links to get here<br />";
-        }
+    //print date("m/d/y, h:i:s");
+    mt_srand(12);
+    print rand(1, 5);
     ?>
-    <a href="http://localhost:7888">Here</a>
+
+    <!-- <a href="http://localhost:7888">Here</a> -->
 
     <?php
       require './header.php';

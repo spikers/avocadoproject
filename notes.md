@@ -98,13 +98,51 @@ Short-Circuit Operations
 `$someVar = do_some_func() OR die("do_some_func() returned false!");`
 Cannot use `||` instead of `OR` because `||` takes a higher precedence than `=`, because of that, it won't short-circuit correctly. `$someVar` will be set to `1`. This is different from JavaScript.
 
+Previous Page  
+`$_SERVER['HTTP_REFERER']`  
+This shows what page the user came from (whether it be google or whatever).
 
+## Time
+`microtime(true);`  
+It makes no sense why this grabs the microtime in a sensible format, as opposed to `microtime()` which gives `decimal number`.
 
+strtotime()
+`strtotime("22 Dec. 1979 17:30");`  
+This works. Amazing! If it can't do the deed, it returns `-1`.
 
+`str_replace()`
 
+Date  
+`date("m/d/y, h:i:s");`
+`h`: Hour  
+`i`: Minute  
+`s`: Second  
+`m`: Month
+`d`: Day
+`Y`: Year, 4 digit
 
+Make Time  
+`mktime(22, 30, 0, 20, 6, 2005, -1);`  
+Don't try to memorize the order of parameters. Just look it up. This is great for date math.
 
+Math
+`round(numberToRound, decimalsToRound);`  
+This is a nice function. I wish Javascript had it.
 
+Random
+`rand(min, max);`  
+`mt_rand(min, max;`  
+`mt_srand(seedNumber);`  
+Okay, this is actually very cool. You can specify a random generator seed, giving a predictable random number.
+
+Trigonometry
+`sin(rads);`  
+`cos(rads);`  
+`tan(rads);`  
+Takes radians  
+`deg2rad(degs);`  
+`rad2deg(rads);`
+These convert.
 
 
 
