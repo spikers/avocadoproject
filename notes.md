@@ -226,7 +226,9 @@ Can be called like this:
 
 Supports Callback Functions  
 
-
+Arrays  
+`$myarray = ["Apples", "Oranges", "Pears"];`  
+Similar to JS.
 
 
 
