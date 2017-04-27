@@ -8,8 +8,9 @@
   <div id="container">
     <?php
     //print date("m/d/y, h:i:s");
-    mt_srand(12);
-    print rand(1, 5);
+    $string = "http://www.example.com/mypage.php";
+    $newstring = strstr($string, "ex");
+    print $newstring;
     ?>
 
     <!-- <a href="http://localhost:7888">Here</a> -->

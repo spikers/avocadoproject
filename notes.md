@@ -144,6 +144,88 @@ Takes radians
 `rad2deg(rads);`
 These convert.
 
+Useful Math Functions
+`abs(number);`  
+`sqrt(number);`  
+`hypot(number1, number2);`  
+`base_convert(number, base_from, base_to);`  
+
+Useful Math Constants
+`M_PI`
+
+Strings
+Substring  
+`substr(string, starting_point, length);`  
+If the `length` is negative, then it'll take from the end. Example:  
+`substr('hello', 0, -1);` will return  
+`hell`  
+`substr('hello friend', -4, -1);` will return  
+`ien`
+
+Replace  
+`$string = "boba`
+`str_replace("b", "c", $string);` turns into `coca`  
+The order of the parameters is nonsensical. The fourth parameter counts the # of times the `b` occurs (2) in this instance. 
+
+ASCII  
+`chr(letter);` returns the ASCII #  
+`ord(number);` returns the ASCII letter
+
+Measuring Strings  
+`strlen(string);` gives you the length.  
+`charcount(string);` gives you an assoc. array with # of times each letter used.  
+`str_word_count(string);` counts the # of words. This seems excessive.  
+
+Finding Strings
+`strpos(needle, haystack, int offset);` Finding needle in haystack.  
+`stripos(needle, haystack, int offset);` Case insensitive version.  
+
+`strstr(haystack, needle);` Finding from the first occurence of the needle to the end of the string. Including the needle. The parameter order is nonsensical.  
+`stristr(haystack, needle)` Case insensitive variant.
+
+Trimming Whitespace  
+`trim(string [, chars_to_remove]);` Cuts out white space. 
+
+Word Wrap  
+`wordwrap($text [, width, [, delimiter [, cut_or_not]]])` Force a line break  
+
+PHP can:  
+Hash your stuff  
+Change Case  
+Strip slashes and escape quotes and slashes  
+Pretty Print Numbers (Much like the Locale in JS)  
+Strip Tags  
+Compare 2 Strings  
+Pad Strings with User-Defined Characters
+`printf`  
+Parse Query Strings using `parse_str()`  
+Do Regex  
+Check whether a function exists using a string  
+Handle extension management using `get_extension_funcs();`  
+Pause script execution without Async nonsense  
+Borrow Unix commands in PHP  
+A bunch of the system stuff went over my head  
+
+Return by Reference  
+`$val =& square1(10);`  
+
+Default Parameters Support
+
+`func_get_arg()` is like arguments in JS.  
+
+Variables are not globally scoped automatically. Use `GLOBALS[]` array to declare global variables
+
+Variable Functions  
+Can be called like this:  
+```
+<?php
+    $func = "sqrt";
+    print $func(49);
+?>
+```
+
+Supports Callback Functions  
+
 
 
 
