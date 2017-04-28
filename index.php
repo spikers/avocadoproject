@@ -3,18 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Avocado Project</title>
+  <link rel="stylesheet" href="./static/css/style.css" />
 </head>
 <body>
   <div id="container">
-    <?php
-    //print date("m/d/y, h:i:s");
-    $string = "http://www.example.com/mypage.php";
-    $newstring = strstr($string, "ex");
-    print $newstring;
-    ?>
-
-    <!-- <a href="http://localhost:7888">Here</a> -->
-
     <?php
       require './header.php';
     ?>

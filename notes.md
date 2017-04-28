@@ -266,5 +266,32 @@ Array Operations
 `array_unshift();`  
 `array_flip()` Swaps keys and values  
 
+Sorting  
+There's 4 ways to sort, read about it. 
+
+`array_keys();`  
+`array_values();`  
+`array_shuffle();`  
+`array_rand();`  
+`range(start, end, step);` JS doesn't have this. This is very useful.  
+
+Array Cursor  
+`reset(array);`  
+`end(array);`  
+`next(array);`  
+`prev(array);`  
+
+Swapping keys for values is ridiculous.  
+`print "This is from an array: {$myarray['foo']}\n";`  
+
+Converting Arrays for Output  
+`serialize();`  
+`unserialize();`  
+`urlencode();`  
+`urldecode();`  
+
+
+
+
 
 

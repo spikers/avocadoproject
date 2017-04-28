@@ -1,7 +1,11 @@
-<pre>
 <?php
-    define("Current_Time", time(), true);
-    $somevar = "CURRENT_TIME";
-    print constant("CURRENT_TIME");
+  include "./modules/main/ingredients.php";
 ?>
-</pre>
+
+<?php
+  include "./modules/main/products.php";
+?>
+
+<?php
+  include "./modules/main/add.php";
+?>
