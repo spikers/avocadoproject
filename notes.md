@@ -230,6 +230,41 @@ Arrays
 `$myarray = ["Apples", "Oranges", "Pears"];`  
 Similar to JS.
 
+Associate Arrays  
+`$myarray = array("a"=>"Apples", "b"=>"Oranges", "c"=>"Pears");`  
+Floating point numbers cannot be keys without being parsed as a string.  
+
+Looping Through Arrays  
+`foreach($array as $val);`  
+The `$array` is looped. `$val` is the values.  There's no way to get the keys.
+
+```
+foreach ($array as $key => $val) {
+    print "$key = $val\n";
+}
+```
+I guess.  
+
+```
+while (list($var, $val) = each($array)) {
+    print "$var is $val\n";
+}
+```
+I'll need to read about this later. I have no idea what this does.  
+
+Array Operations  
+`array_diff(arr1, arr2);`
+`array_intersect(arr1, arr2);`  
+`array_merge(arr1, arr2);`  
+`array_unique(arr1);`
+`array_filter(arr1, callback);`
+`extract(arr1);` Confusingly turns keys into variables.  
+`in_array(needle, haystack);`  
+`array_pop();`  
+`array_push();`  
+`array_shift();`  
+`array_unshift();`  
+`array_flip()` Swaps keys and values  
 
 
 
