@@ -18,7 +18,7 @@
     ?>
   </div>
 
-<script>
+<!-- <script>
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://localhost:7888/server.php');
 xhr.addEventListener('load', function (data) {
@@ -26,6 +26,6 @@ xhr.addEventListener('load', function (data) {
 });
 xhr.send();
 
-</script>
+</script> -->
 </body>
 </html>
