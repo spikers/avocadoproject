@@ -1,8 +1,14 @@
 <form action="http://localhost:7888/post.php">
   <textarea></textarea>
-  <button>Submit</button>
+  <button id="submit-button" type="button">Submit</button>
 </form>
 <script>
+window.addEventListener('load', function () {
+  var submitButton = document.getElementById('submit-button');
+  submitButton.addEventListener('click', function () {
+    handleSubmit();
+  });
+});
 
 
 function handleSubmit() {

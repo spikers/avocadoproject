@@ -17,15 +17,5 @@
       require './footer.php';
     ?>
   </div>
-
-<!-- <script>
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://localhost:7888/server.php');
-xhr.addEventListener('load', function (data) {
-  console.log('data', data.target.response);
-});
-xhr.send();
-
-</script> -->
 </body>
 </html>
