@@ -14,7 +14,7 @@ function handlePost() {
 }
 
 function sanityCheck($function_name) {
-  print $_POST['ingredient'].", $function_name ".$_POST['product']." || ";
+  // print $_POST['ingredient'].", $function_name ".$_POST['product']." || ";
 }
 
 function connectToDatabase() {
@@ -26,7 +26,7 @@ function handleInsert($mysqli, $ingredient, $product) {
   sanityCheck("handleInsert");
   $query = "INSERT INTO `ingredients_products` (`ingredient`,`product`) VALUES ('$ingredient', '$product');";
   $success = $mysqli->query($query);
-  print $success;
+  // print $success;
 }
 
 ?>
