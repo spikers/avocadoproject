@@ -1,4 +1,6 @@
 <?php
+$GLOBALS['production'] = true;
+
 if ($_POST['ingredient'] !== null && $_POST['product'] != null) {
   handlePost();
 } else {
@@ -14,7 +16,11 @@ function handlePost() {
 }
 
 function sanityCheck($function_name) {
-  // print $_POST['ingredient'].", $function_name ".$_POST['product']." || ";
+  if (!$GLOBALS['production']) {
+    print $_POST['ingredient'].", $function_name ".$_POST['product']." || ";
+  } else {
+    //Do nothing
+  }
 }
 
 function connectToDatabase() {
@@ -26,7 +32,6 @@ function handleInsert($mysqli, $ingredient, $product) {
   sanityCheck("handleInsert");
   $query = "INSERT INTO `ingredients_products` (`ingredient`,`product`) VALUES ('$ingredient', '$product');";
   $success = $mysqli->query($query);
-  // print $success;
 }
 
 ?>
