@@ -14,17 +14,23 @@
   <?php 
     for ($i = 0; $i < count($rows); $i++) {
       ?>
-        <div id="item">
-          <div id="ingredient">
+        <div class="item">
+          <div class="ingredient">
             <p><?=$rows[$i]['ingredient']?></p>
           </div>
-          <div id="product">
+          <div class="product">
             <p><?=$rows[$i]['product']?></p>
           </div>
         </div>
       <?php
     }
   ?>
+  <script>
+    var item = document.getElementsByClassName('item');
+    for (var i = 0; i < item.length; i++) {
+      console.log(item[i]);
+    }
+  </script>
 </div>
 
 
