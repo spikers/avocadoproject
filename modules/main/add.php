@@ -1,12 +1,13 @@
-<form action="http://localhost:7888/post.php">
-  Ingredient: <input type="text" name="ingredient" id="ingredient"><br>
+<form id="add-form" action="http://localhost:7888">
   Product: <input type="text" name="product" id="product"><br>
-  <button id="submit-button" type="button">Submit</button>
+  Ingredient: <input type="text" name="ingredient" id="ingredient"><br>
+  <button>Submit</button>
 </form>
 <script>
 window.addEventListener('load', function () {
-  var submitButton = document.getElementById('submit-button');
-  submitButton.addEventListener('click', function () {
+  var addForm = document.getElementById('add-form');
+  addForm.addEventListener('submit', function (e) {
+    e.preventDefault();
     handleSubmit();
   });
 });
@@ -23,9 +24,8 @@ function handleSubmit() {
   xhr.addEventListener('load', function (data) {
     console.log(data.target.response);
   });
+
   xhr.open('POST', 'http://localhost:7888/post.php');
   xhr.send(data);
 }
-
-
 </script>

@@ -3,12 +3,11 @@
   $mysqli = connectToDatabase();
   $query = "SELECT ingredient, product FROM `ingredients_products`";
   $result = $mysqli->query($query);
+  // $rows is my assoc array with all my stuff
   $rows = array();
   while($r = $result->fetch_assoc()) {
     $rows[] = $r;
   }
-  // $rows is my assoc array with all my stuff
-  print print_r($rows[0]);
 ?>
 <div id="ingredients">
   <?php 
@@ -32,28 +31,3 @@
     }
   </script>
 </div>
-
-
-
-
-
-
-
-
-
-<!-- <div id="ingredients">
-
-</div>
-<script>
-  var formData = new FormData();
-
-  var xhr = new XMLHttpRequest();
-  xhr.addEventListener('load', function (data) {
-    // Life on the edge
-    data = JSON.parse(data.target.response);
-    document.getElementById('ingredients');
-
-  });
-  xhr.open('GET', "http://localhost:7888/modules/endpoints/ingredients.php");
-  xhr.send();
-</script> -->

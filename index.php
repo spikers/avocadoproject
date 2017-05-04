@@ -7,15 +7,17 @@
 </head>
 <body>
   <div id="container">
-    <?php
-      require './header.php';
-    ?>
-    <?php
-      require './main.php';
-    ?>
-    <?php
-      require './footer.php';
-    ?>
+    <div id="body-content">
+      <?php
+        require './header.php';
+      ?>
+      <?php
+        require './main.php';
+      ?>
+      <?php
+        require './footer.php';
+      ?>
+    </div>
   </div>
 </body>
 </html>
