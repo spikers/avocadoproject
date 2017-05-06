@@ -5,9 +5,9 @@
 </form>
 <script>
 window.addEventListener('load', function () {
+  document.getElementById('product').focus();
   var addForm = document.getElementById('add-form');
   addForm.addEventListener('submit', function (e) {
-    e.preventDefault();
     handleSubmit();
   });
 });
