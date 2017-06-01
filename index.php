@@ -11,14 +11,13 @@ $currentUri = getCurrentUri();
 $routes = array();
 $routes = preg_split('@/@', $currentUri, NULL, PREG_SPLIT_NO_EMPTY);
 
-switch ($routes) {
-  case Array():
-    require('./home.php');
-    break;
-  case Array('cheese'):
-    print 'Greetings!';
-    break;
-  default:
-    print 'Not quite sure how you got here...';
+function getProductPage($productsArray) {
+  print 'getProductPage called'.$productsArray[0];
+}
+
+if (empty($routes)) {
+  require('./home.php');
+} else {
+  getProductPage($routes);
 }
 ?>
