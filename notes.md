@@ -291,7 +291,13 @@ Converting Arrays for Output
 `urldecode();`  
 
 
+How to Set Up URL Routing (Apache)
 
-
+* Create .htaccess File.  
+      `Options -MultiViews`  
+      `RewriteEngine On`  
+      `RewriteCond %{REQUEST_FILENAME} !-f`  
+      `RewriteRule ^ index.php [QSA,L]` 
+*  
 
 
