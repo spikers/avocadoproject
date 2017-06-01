@@ -25,7 +25,11 @@ function handleSubmit() {
     console.log(data.target.response);
   });
 
-  xhr.open('POST', 'http://localhost:7888/post.php');
+  xhr.open('POST', '<?php
+    // The reason I do this is to keep a consistent base URL I can change at any time.
+    require __DIR__.'/../../baseurl.php';
+    print $baseUrl;
+  ?>/post.php');
   xhr.send(data);
 }
 </script>
