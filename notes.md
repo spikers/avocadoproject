@@ -298,6 +298,9 @@ How to Set Up URL Routing (Apache)
       `RewriteEngine On`  
       `RewriteCond %{REQUEST_FILENAME} !-f`  
       `RewriteRule ^ index.php [QSA,L]` 
-*  
+*  Grab the URI from $_SERVER['REQUEST_URI']
+*  Handle the routes after getting the URI
+
+I set up my index.php to be my routing home. This may or may not be a good idea.
 
 

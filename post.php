@@ -9,7 +9,10 @@ if ($_POST['ingredient'] !== null && $_POST['product'] != null) {
 
 function handlePost() {
   sanityCheck("handlePost");
+
+  include './connectToDatabase.php';
   $mysqli = connectToDatabase();
+  
   $ingredient = $_POST['ingredient'];
   $product = $_POST['product'];
   handleInsert($mysqli, $ingredient, $product);
@@ -21,11 +24,6 @@ function sanityCheck($function_name) {
   } else {
     //Do nothing
   }
-}
-
-function connectToDatabase() {
-  include "./config.php";
-  return $mysqli;
 }
 
 function handleInsert($mysqli, $ingredient, $product) {
