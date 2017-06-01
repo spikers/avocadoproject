@@ -1,4 +1,8 @@
-<form id="add-form" action="http://localhost:7888">
+<form id="add-form" action="<?php
+    // The reason I do this is to keep a consistent base URL I can change at any time.
+    require __DIR__.'/../../baseurl.php';
+    print $baseUrl;
+  ?>">
   Product: <input type="text" name="product" id="product"><br>
   Ingredient: <input type="text" name="ingredient" id="ingredient"><br>
   <button>Submit</button>

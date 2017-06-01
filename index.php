@@ -20,14 +20,28 @@ function getProductPage($productsArray) {
   include './connectToDatabase.php';
   $mysqli = connectToDatabase();
 
+  $history = findProductFromDatabase($mysqli, $product);
+  foreach ($history as $item) {
+    print "$item ";
+  }
+}
+
+function findProductFromDatabase($mysqli, $product) {
   $query = "SELECT * FROM `ingredients_products` WHERE '$product' IN (`product`)";
   $result = $mysqli->query($query);
+  $rows = [];
 
   while ($row = mysqli_fetch_assoc($result)) {
     $rows[] = $row;
   }
 
-  print $rows[0]['ingredient']." => ".$product;
+  if (!empty($rows)) {
+    $arr = findProductFromDatabase($mysqli, $rows[0]['ingredient']);
+    array_push($arr, $product);
+    return $arr;
+  } else {
+    return [$product];
+  }
 }
 
 
